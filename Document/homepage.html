@@ -1,11 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Legendary Motorsport</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            
+            header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+            }
+            
+            #logo {
+                max-width: 500px; 
+                height: auto;
+            }
+            
+        </style>
+    </head>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let slideIndex = 0;
+            let slides = document.getElementsByClassName("slide");
     
-</body>
+            function showSlides() {
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+    
+                slideIndex++;
+    
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+    
+                slides[slideIndex - 1].style.display = "block";
+    
+                setTimeout(showSlides, 3000); // Κάθε 3 δευτερόλεπτα αλλάζει εικόνα στο slideshow
+            }
+    
+            showSlides(); // Το slideshow ξεκινάει όταν φορτώσει η σελίδα
+        });
+    </script>
+    
+    <body>
+        <header>
+            <img src="logo.png" alt="Legendary Motorsport Logo" id="logo">
+        </header>
+        <div class="content">
+            <nav class="sidebar">
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                </ul>
+            </nav>
+        
+        <main>
+            <section id="slideshow">
+                <div class="slide fade">
+                    <img src="jimmy.png" alt="Car 1">
+                </div>
+                <div class="slide fade">
+                    <img src="vitara.png" alt="Car 2">
+                </div>
+                <div class="slide fade">
+                    <img src="swift.png" alt="Car 3">
+                </div>
+                <div class="slide fade">
+                    <img src="minicooper.png" alt="Car 4">
+                </div>
+                <div class="slide fade">
+                    <img src="208.png" alt="Car 5">
+                </div>
+                <div class="slide fade">
+                    <img src="308.png" alt="Car 6">
+                </div>
+                <div class="slide fade">
+                    <img src="3008.png" alt="Car 7">
+                </div>
+                <div class="slide fade">
+                    <img src="2008.png" alt="Car 8">
+                </div>
+                <div class="slide fade">
+                    <img src="yaris.png" alt="Car 9">
+                </div>
+                <div class="slide fade">
+                    <img src="qashqai.png" alt="Car 10">
+                </div>
+                <div class="slide fade">
+                    <img src="prius.png" alt="Car 11">
+                </div>
+                <div class="slide fade">
+                    <img src="clio.png" alt="Car 12">
+                </div>
+                <div class="slide fade">
+                    <img src="megane.png" alt="Car 13">
+                </div>
+                <div class="slide fade">
+                    <img src="matiz.png" alt="Car 14">
+                </div>
+                <div class="slide fade">
+                    <img src="i10.png" alt="Car 15">
+                </div>
+                <div class="slide fade">
+                    <img src="i20.png" alt="Car 16">
+                </div>
+                <div class="slide fade">
+                    <img src="i30.png" alt="Car 17">
+                </div>
+                <div class="slide fade">
+                    <img src="civic.png" alt="Car 18">
+                </div>
+                <div class="slide fade">
+                    <img src="micra.png" alt="Car 19">
+                </div>
+                <div class="slide fade">
+                    <img src="auris.png" alt="Car 20">
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Team Members: John Doe, Jane Smith, Alex Brown</p>
+        </footer>
+    </body>
+
 </html>
