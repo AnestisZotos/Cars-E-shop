@@ -1,0 +1,27 @@
+#slideshow {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Προσαρμοσμένο πλάτος */
+    height: 400px; /* Καθορισμένο ύψος */
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none; /*Για να κρύψουμε τις εικόνες στην αρχή */
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%; /* Κάνει όλες τις εικόνες να γεμίζουν το container */
+    height: 400px; /* Καθορισμένο ύψος */
+    object-fit: contain; 
+    background-color: transparent;
+}
+
+
+/* Εμφανίζει την πρώτη εικόνα */
+.slide:first-child {
+    display: block;
+}
