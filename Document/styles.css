@@ -1,3 +1,18 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-bottom: 1px solid black;
+    background-color:#F9F9F9 ;
+}
+
+#logo {
+    max-width: 450px; 
+    height: auto;
+}
+
 #slideshow {
     position: relative;
     width: 100%;
@@ -5,12 +20,14 @@
     height: 400px; /* Καθορισμένο ύψος */
     margin: auto;
     overflow: hidden;
+    border: 3px solid black;
 }
 
 .slide {
     display: none; /*Για να κρύψουμε τις εικόνες στην αρχή */
     width: 100%;
     height: 100%;
+    background-color: white;
 }
 
 .slide img {
@@ -24,4 +41,55 @@
 /* Εμφανίζει την πρώτη εικόνα */
 .slide:first-child {
     display: block;
+}
+.button-link {
+    display: block; 
+    padding: 12px 24px;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(15, 14, 14);
+    font-size: 16px;
+    font-weight: 450;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    background-color: #781010;
+    border-radius: 17px;
+    width: 100px;
+}
+
+body{
+    background-color: rgb(26, 23, 23);
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #781010;
+    
+
+}
+
+div p{
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+
+}
+footer p {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: 450;
+    color: #fff;
+}
+
+.content-sidebar{
+    background-color: #781010;
 }
