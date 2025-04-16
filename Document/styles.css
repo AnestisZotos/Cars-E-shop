@@ -16,32 +16,22 @@ header {
 #slideshow {
     position: relative;
     width: 100%;
-    max-width: 800px; /* Προσαρμοσμένο πλάτος */
-    height: 400px; /* Καθορισμένο ύψος */
-    margin: auto;
+    height: 300px; /* Adjust as needed */
     overflow: hidden;
-    border: 3px solid black;
 }
 
 .slide {
-    display: none; /*Για να κρύψουμε τις εικόνες στην αρχή */
+    position: absolute;
     width: 100%;
     height: 100%;
-    background-color: white;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-.slide img {
-    width: 100%; /* Κάνει όλες τις εικόνες να γεμίζουν το container */
-    height: 400px; /* Καθορισμένο ύψος */
-    object-fit: contain; 
-    background-color: transparent;
+.slide.active {
+    opacity: 1;
 }
 
-
-/* Εμφανίζει την πρώτη εικόνα */
-.slide:first-child {
-    display: block;
-}
 .button-link {
     display: block; 
     padding: 12px 24px;
@@ -90,7 +80,7 @@ footer p {
     color: #fff;
 }
 
-.content-sidebar{
+content-sidebar{
     background-color: #781010;
 }
 
@@ -174,4 +164,50 @@ footer p {
 
 .buy-button:hover {
     background-color: #5a0c0c;
+}
+
+#slideshow {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+.slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.slide.active {
+    display: block;
 }

@@ -6,31 +6,7 @@
         <title>Legendary Motorsport</title>
         <link rel="stylesheet" href="styles.css">
     </head>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let slideIndex = 0;
-            let slides = document.getElementsByClassName("slide");
-    
-            function showSlides() {
-                for (let i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";  
-                }
-    
-                slideIndex++;
-    
-                if (slideIndex > slides.length) {
-                    slideIndex = 1;
-                }
-    
-                slides[slideIndex - 1].style.display = "block";
-    
-                setTimeout(showSlides, 3000); // Κάθε 3 δευτερόλεπτα αλλάζει εικόνα στο slideshow
-            }
-    
-            showSlides(); // Το slideshow ξεκινάει όταν φορτώσει η σελίδα
-        });
-    </script>
-    
+    <script src="products.js"></script>
     <body>
         <header>
             <img src="images/logo.png" alt="Legendary Motorsport Logo" id="logo">
@@ -41,69 +17,9 @@
                     <a href="products.html" class="button-link">Products</a>
             </nav>
         </div>
-        
         <main>
             <section id="slideshow">
-                <div class="slide fade">
-                    <img src="images/jimmy.png" alt="Car 1">
-                </div>
-                <div class="slide fade">
-                    <img src="images/vitara.png" alt="Car 2">
-                </div>
-                <div class="slide fade">
-                    <img src="images/swift.png" alt="Car 3">
-                </div>
-                <div class="slide fade">
-                    <img src="images/minicooper.png" alt="Car 4">
-                </div>
-                <div class="slide fade">
-                    <img src="images/208.png" alt="Car 5">
-                </div>
-                <div class="slide fade">
-                    <img src="images/308.png" alt="Car 6">
-                </div>
-                <div class="slide fade">
-                    <img src="images/3008.png" alt="Car 7">
-                </div>
-                <div class="slide fade">
-                    <img src="images/2008.png" alt="Car 8">
-                </div>
-                <div class="slide fade">
-                    <img src="images/yaris.png" alt="Car 9">
-                </div>
-                <div class="slide fade">
-                    <img src="images/qashqai.png" alt="Car 10">
-                </div>
-                <div class="slide fade">
-                    <img src="images/prius.png" alt="Car 11">
-                </div>
-                <div class="slide fade">
-                    <img src="images/clio.png" alt="Car 12">
-                </div>
-                <div class="slide fade">
-                    <img src="images/megane.png" alt="Car 13">
-                </div>
-                <div class="slide fade">
-                    <img src="images/matiz.png" alt="Car 14">
-                </div>
-                <div class="slide fade">
-                    <img src="images/i10.png" alt="Car 15">
-                </div>
-                <div class="slide fade">
-                    <img src="images/i20.png" alt="Car 16">
-                </div>
-                <div class="slide fade">
-                    <img src="images/i30.png" alt="Car 17">
-                </div>
-                <div class="slide fade">
-                    <img src="images/civic.png" alt="Car 18">
-                </div>
-                <div class="slide fade">
-                    <img src="images/micra.png" alt="Car 19">
-                </div>
-                <div class="slide fade">
-                    <img src="images/auris.png" alt="Car 20">
-                </div>
+                <!-- Slides will be dynamically added here -->
             </section>
             <div>
                 <p>
