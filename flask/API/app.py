@@ -6,7 +6,7 @@ from bson import ObjectId
 app = Flask(__name__)
 CORS(app)
 
-app.config["MONGO_URI"] = "mongodb+srv://val-makkas:mTwJsN9grElylk3v@cars-e-shop.hwvqbpa.mongodb.net/car_shop?retryWrites=true&w=majority&appName=Cars-E-shop"
+app.config["MONGO_URI"] = "mongodb://mongo:27017/cars_eshop"
 
 try:
     mongo = PyMongo(app)
@@ -19,7 +19,6 @@ try:
     print("Text index created successfully!")
 except Exception as e:
     print(f"Error connecting to MongoDB: {str(e)}")
-    print(f"Connection URI: {app.config['MONGO_URI']}")
     raise
 
 @app.route('/search', methods=['GET'])
@@ -70,4 +69,4 @@ def get_popular_products():
     return jsonify(products)
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=5000, debug=True) 
+    app.run(host='0.0.0.0', port=5000, debug=True)
